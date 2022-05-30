@@ -27,8 +27,8 @@ function Header() {
         <div className="flex items-center space-x-2 md:space-x-10 drop-shadow-2xl ">
         <img
           src="https://rb.gy/ruxwwy"
-          width={250}
-          height={250}
+          width={150}
+          height={150}
           className="cursor-pointer object-contain"
         />
 
