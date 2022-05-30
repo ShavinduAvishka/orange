@@ -24,11 +24,11 @@ function Header() {
 
   return (
     <header className={`${isScrolled && 'bg-[#141414]'}`}>
-        <div className="flex items-center space-x-2 md:space-x-10 ">
+        <div className="flex items-center space-x-2 md:space-x-10 drop-shadow-2xl ">
         <img
-          src="https://rb.gy/ulxxee"
-          width={100}
-          height={100}
+          src="https://rb.gy/ruxwwy"
+          width={250}
+          height={250}
           className="cursor-pointer object-contain"
         />
 
@@ -47,8 +47,9 @@ function Header() {
             <BellIcon className="h-6 w-6" />
             <Link href="/account">
                 <img
-                src="https://rb.gy/g1pwyx"
-                alt=""
+                src="https://rb.gy/vahq7p"
+                width={50}
+                height={50}
                 className="cursor-pointer rounded"
                 />
             </Link>
