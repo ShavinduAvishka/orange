@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Banner from '../components/Banner'
 import Header from '../components/Header'
 import Row from '../components/Row'
+import useAuth from '../hooks/useAuth'
 import { Movie } from '../typings'
 import requests from '../utils/requests'
 
@@ -28,6 +29,10 @@ const Home = ({netflixOriginals,
   topRated,
   trendingNow,
 }: Props ) => {
+
+  const { logout, loading } = useAuth()
+
+  if (loading) return null
   
   return (
     <div className="className={`relative h-screen
