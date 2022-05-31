@@ -24,6 +24,8 @@ import {
 import { db } from '../firebase'
 import useAuth from '../hooks/useAuth'
 import toast, { Toaster } from 'react-hot-toast'
+import React from 'react'
+import { PauseIcon, PlayIcon } from '@heroicons/react/solid'
 
 function Modal() {
   const [movie, setMovie] = useRecoilState(movieState)
@@ -34,6 +36,9 @@ function Modal() {
   const [addedToList, setAddedToList] = useState(false)
   const { user } = useAuth()
   const [movies, setMovies] = useState<DocumentData[] | Movie[]>([])
+  const [playing, setPlaying] = useState(false)
+  const play = () => setPlaying(true)
+  const pause = () => setPlaying(false)
 
   const toastStyle = {
     background: 'white',
@@ -149,15 +154,26 @@ function Modal() {
             width="100%"
             height="100%"
             style={{ position: 'absolute', top: '0', left: '0' }}
-            playing
-            muted={muted}
+           
+            muted={!muted}
+            playing={playing}
+            onPlay={play}
+            onPause={pause}
+        
           />
-          <div className="absolute bottom-10 flex w-full items-center justify-between px-10">
+
+            Playing: {playing ? 'true' : 'false'}
+          
+          <div className="absolute bottom-5 flex w-full items-center justify-between px-10">
             <div className="flex space-x-2">
-              <button className="flex items-center gap-x-2 rounded bg-white px-8 text-xl font-bold text-black transition hover:bg-[#e6e6e6]">
-                <FaPlay className="h-7 w-7 text-black" />
-                Play
-              </button>
+            <button className="modalButton" onClick={() => setPlaying(!playing)}>
+              {playing ? (
+                <PauseIcon className="h-6 w-6" />
+              ) : (
+                <PlayIcon className="h-6 w-6" />
+              )}
+            </button>
+        
               <button className="modalButton" onClick={handleList}>
                 {addedToList ? (
                   <CheckIcon className="h-7 w-7" />
@@ -169,16 +185,21 @@ function Modal() {
                 <ThumbUpIcon className="h-6 w-6" />
               </button>
             </div>
+
+            <div className="flex space-x-2">
             <button className="modalButton" onClick={() => setMuted(!muted)}>
               {muted ? (
-                <VolumeOffIcon className="h-6 w-6" />
-              ) : (
                 <VolumeUpIcon className="h-6 w-6" />
+              ) : (
+                <VolumeOffIcon className="h-6 w-6" />
               )}
             </button>
+
+            
+            </div>
           </div>
         </div>
-        <div className="flex space-x-16 rounded-b-md bg-[#181818] px-10 py-8">
+        <div className="flex space-x-16 rounded-b-md bg-[#181818] px-10 py-4">
           <div className="space-y-6 text-lg">
             <div className="flex items-center space-x-2 text-sm">
               <p className="font-semibold text-orange-500">
