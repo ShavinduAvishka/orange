@@ -40,11 +40,12 @@ const Home = ({netflixOriginals,
   
   return (
     <div className={`relative h-screen bg-gradient-to-b from-gray-900/10 to-[#010511] lg:h-[140vh] ${
-      showModal && '!h-screen overflow-hidden'
-    }`}>
+        showModal && '!h-screen overflow-hidden'
+      }`}>
       <Head>
         <title>Home - Orange</title>
         <link rel="icon" href="/favicon.ico" />
+        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
       </Head>
       <Header/>
       
@@ -66,8 +67,20 @@ const Home = ({netflixOriginals,
 
       {showModal && <Modal />}
 
+      <div dangerouslySetInnerHTML={{ __html: `
+   <df-messenger
+     intent="WELCOME"
+     chat-title="FirstTest"
+     agent-id="1f03b05f-2a04-439c-868f-44f6762fbb4e"
+     language-code="en">
+   </df-messenger>
+` }} />
+
     </div>
-  )
+  
+
+
+  ) 
 }
 
 export default Home
