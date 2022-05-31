@@ -164,7 +164,7 @@ function Modal() {
 
             Playing: {playing ? 'true' : 'false'}
           
-        <div className="absolute bottom-5 flex w-full items-center justify-between px-10 opacity-0 transition hover:opacity-100">
+        <div className="absolute bottom-3 flex w-full items-center justify-between px-10 opacity-0 transition hover:opacity-100">
             <div className="flex space-x-2">
             <button className="modalButton hover:bg-orange-600" onClick={() => setPlaying(!playing)}>
               {playing ? (
