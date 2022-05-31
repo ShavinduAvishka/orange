@@ -71,10 +71,27 @@ const Home = ({netflixOriginals,
    <df-messenger
      intent="WELCOME"
      chat-title="FirstTest"
+     chat-icon="https://rb.gy/8idhxr"
      agent-id="1f03b05f-2a04-439c-868f-44f6762fbb4e"
      language-code="en">
+     <style>
+     df-messenger {
+      --df-messenger-bot-message: #ffa500;
+      --df-messenger-font-color: white;
+      --df-messenger-chat-background-color: #ffedcc;
+      --df-messenger-button-titlebar-color: #ffa500;
+      --df-messenger-user-message: #191000;
+      --df-messenger-send-icon: #ffa500;
+      --df-messenger-input-box-color: #ffffff;
+      --df-messenger-input-placeholder-font-color: #ffa500;
+      --df-messenger-minimized-chat-close-icon-color: #ffa500;
+      
+
+     }
+     </style>
    </df-messenger>
 ` }} />
+
 
     </div>
   
