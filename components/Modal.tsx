@@ -166,7 +166,7 @@ function Modal() {
           
         <div className="absolute bottom-3 flex w-full items-center justify-between px-10 opacity-0 transition hover:opacity-100">
             <div className="flex space-x-2">
-            <button className="modalButton hover:bg-orange-600" onClick={() => setPlaying(!playing)}>
+            <button className="modalButton hover:bg-orange-500" onClick={() => setPlaying(!playing)}>
               {playing ? (
                 <PauseIcon className="h-6 w-6" />
               ) : (
@@ -174,20 +174,20 @@ function Modal() {
               )}
             </button>
         
-              <button className="modalButton hover:bg-orange-600" onClick={handleList}>
+              <button className="modalButton hover:bg-orange-500" onClick={handleList}>
                 {addedToList ? (
                   <CheckIcon className="h-7 w-7" />
                 ) : (
                   <PlusIcon className="h-7 w-7" />
                 )}
               </button>
-              <button className="modalButton hover:bg-orange-600">
+              <button className="modalButton hover:bg-orange-500">
                 <ThumbUpIcon className="h-6 w-6" />
               </button>
             </div>
 
             <div className="flex space-x-2">
-            <button className="modalButton hover:bg-orange-600" onClick={() => setMuted(!muted)}>
+            <button className="modalButton hover:bg-orange-500" onClick={() => setMuted(!muted)}>
               {muted ? (
                 <VolumeUpIcon className="h-6 w-6" />
               ) : (

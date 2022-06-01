@@ -70,9 +70,9 @@ const Home = ({netflixOriginals,
       <div dangerouslySetInnerHTML={{ __html: `
    <df-messenger
      intent="WELCOME"
-     chat-title="FirstTest"
+     chat-title="OrangeBot"
      chat-icon="https://rb.gy/8idhxr"
-     agent-id="1f03b05f-2a04-439c-868f-44f6762fbb4e"
+     agent-id="bf840e2f-90bc-446c-b7ba-f8d187b43196"
      language-code="en">
      <style>
      df-messenger {
