@@ -28,7 +28,7 @@ function Header() {
     <header className={`${isScrolled && 'bg-[#141414] drop-shadow-2xl'}`}>
         <div className="flex items-center space-x-2 md:space-x-10 drop-shadow-2xl ">
         <img
-          src="https://rb.gy/i9epeg"
+          src="https://rb.gy/we8jfx"
           width={180}
           height={180}
           className="cursor-pointer object-contain"
@@ -52,7 +52,7 @@ function Header() {
             <Link href="/account">
                 <img
                 onClick={logout}
-                src="https://rb.gy/vahq7p"
+                src="https://rb.gy/7wbkxj"
                 width={50}
                 height={50}
                 className="cursor-pointer rounded"

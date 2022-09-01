@@ -87,7 +87,7 @@ const Home = ({netflixOriginals,
    <df-messenger
      intent="WELCOME"
      chat-title="OrangeBot"
-     chat-icon="https://rb.gy/8idhxr"
+     chat-icon="https://rb.gy/m099m8"
      agent-id="bf840e2f-90bc-446c-b7ba-f8d187b43196"
      language-code="en">
      <style>

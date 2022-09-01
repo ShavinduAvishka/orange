@@ -46,7 +46,7 @@ function Login() {
         
       </Head>
       <img
-        src="https://rb.gy/i9epeg"
+        src="https://rb.gy/we8jfx"
         className="absolute left-4 top-4 cursor-pointer object-contain md:left-10 md:top-8 drop-shadow-2xl"
         width={180}
         height={180}
