@@ -39,7 +39,7 @@ function Header() {
             <li className="headerLink">TV Shows</li>
             <li className="headerLink">Movie</li>
             <li className="headerLink">New & Popular</li> */}
-            <li className="headerLink">My List</li>
+            {/* <li className="headerLink">My List</li> */}
         </ul>
         </div>
 
